@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 import Cities from './Cities'
 
 class App extends Component{
@@ -16,14 +14,10 @@ class App extends Component{
             <div className="App">
                 <h1>Data kota</h1>
                 <p>Welcome :)</p>
-                {/*<Cities nama="Jakarta" luas="1000" berpantai="true"/>*/}
                 <Cities cities={this.state.cities} />
             </div>
         );
     }
 }
-/*function App() {
-    return..
-}*/
 
 export default App;
