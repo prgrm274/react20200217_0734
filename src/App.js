@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Cities from './Cities'
+import AddCity from "./AddCity";
 
 class App extends Component{
     state = {
@@ -15,6 +16,7 @@ class App extends Component{
                 <h1>Data kota</h1>
                 <p>Welcome :)</p>
                 <Cities cities={this.state.cities} />
+                <AddCity />
             </div>
         );
     }

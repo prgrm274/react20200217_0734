@@ -18,20 +18,24 @@ const Cities = ({cities}) => {
             return null
         }*/
 
-        // todo using ternary
-        return city.luas > 500 ? (
-            <div className="city" key={city.id}>
-                <div>Nama: {city.nama}</div>
-                <div>Luas: {city.luas}</div>
-                <div>Berpantai: {city.berpantai}</div>
-                <p/><p/>
-            </div>
-        ) : null;
+
     });
 
 
     return(
-        <div className="city-list">{ cityList }</div>
+        <div className="city-list">{
+            cities.map(city => {
+                // todo using ternary
+                return city.luas > 500 ? (
+                    <div className="city" key={city.id}>
+                        <div>Nama: {city.nama}</div>
+                        <div>Luas: {city.luas}</div>
+                        <div>Berpantai: {city.berpantai}</div>
+                        <p/><p/>
+                    </div>
+                ) : null;
+            })
+        }</div>
     )
 }
 
