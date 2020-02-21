@@ -1,9 +1,8 @@
 import React from "react";
 
-const Cities = (props) => {
+const Cities = (cities) => {
     // console.log(this.props);
     // const {nama, luas, berpantai} = this.props;
-    const {cities} = props;
     const cityList = cities.map(city => {
         return (
             <div className="city" key={city.id}>
