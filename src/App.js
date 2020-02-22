@@ -10,13 +10,21 @@ class App extends Component{
             { nama: 'Surabaya', luas: 700, berpantai: false, id: 3},
         ]
     }
+    addCity = (city) => {
+        // console.log(city)
+        city.id = Math.random();
+        let cities = [...this.state.cities, city];
+        this.setState({
+            cities: cities
+        })
+    };
     render() {
         return (
             <div className="App">
                 <h1>Data kota</h1>
                 <p>Welcome :)</p>
                 <Cities cities={this.state.cities} />
-                <AddCity />
+                <AddCity addCity={this.addCity}/>
             </div>
         );
     }
