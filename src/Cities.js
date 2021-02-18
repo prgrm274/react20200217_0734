@@ -1,28 +1,32 @@
 import React from "react";
 
-const Cities = ({cities}) => {
+const Cities = ({cities, deleteCity}) => {
     // console.log(this.props);
     // const {nama, luas, berpantai} = this.props;
     const cityList = cities.map(city => {
-        /*if (city.luas > 500) {
+        if (city.luas > 500) {
             return (
                 <div className="city" key={city.id}>
                     <div>Nama: {city.nama}</div>
                     <div>Luas: {city.luas}</div>
                     <div>Berpantai: {city.berpantai}</div>
+                    <button onClick={() => {deleteCity(city.id)}}>Delete city</button>
                     <p/><p/>
                 </div>
             )
 
         } else {
             return null
-        }*/
+        }
 
 
     });
 
-
     return(
+        <div className="city-list">{ cityList }</div>
+    )
+
+    /*return(
         <div className="city-list">{
             cities.map(city => {
                 // todo using ternary
@@ -36,7 +40,7 @@ const Cities = ({cities}) => {
                 ) : null;
             })
         }</div>
-    )
+    )*/
 }
 
 export default Cities
